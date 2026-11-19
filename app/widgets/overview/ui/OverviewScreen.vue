@@ -27,7 +27,7 @@ import logo from '~/common/icon/logo.svg'
 import TrainScene from '~/widgets/train-scene/ui/TrainScene.vue'
 import { useHazardTracker } from '~/entities/hazard/model/useHazardTracker'
 
-const { isDemo, hazardId, distance, status, isMoving, speed, geoError, start, stop } =
+const { isDemo, hazardId, hazardTitle, distance, status, isMoving, speed, geoError, start, stop } =
   useHazardTracker()
 
 onMounted(start)
@@ -49,11 +49,11 @@ const valueText = computed(() => {
 })
 
 const captionText = computed(() =>
-  distance.value == null ? 'опасностей рядом нет' : 'до опасности',
+  distance.value == null ? 'опасностей рядом нет' : hazardTitle,
 )
 
 const isNear = computed(() => {
-  return distance !== null && distance <= 50
+  return distance.value !== null && distance.value <= 50
 });
 
 </script>
@@ -122,7 +122,7 @@ $red: #f0261c;
     color: $text;
   }
 
-  &__caption.active {
+  &__value.active {
     color: $red;
   }
 }

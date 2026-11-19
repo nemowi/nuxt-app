@@ -22,6 +22,7 @@ export const useHazardTracker = () => {
   const geo = useGeoPosition()
 
   const hazardId = ref<number | null>(null)
+  const hazardTitle = ref<string | null>(null);
   const distance = ref<number | null>(null) // плавное расстояние для UI, м
   const status = ref<'idle' | 'ok' | 'error'>('idle')
 
@@ -42,6 +43,7 @@ export const useHazardTracker = () => {
   const clear = () => {
     hazardId.value = null
     distance.value = null
+    hazardTitle.value = null;
     target = null
   }
 
@@ -93,6 +95,7 @@ export const useHazardTracker = () => {
 
     if (hazardId.value !== best.id) distance.value = bestD // новая точка — сразу
     hazardId.value = best.id
+    hazardTitle.value = best.title
     target = bestD
   }
 
@@ -116,6 +119,7 @@ export const useHazardTracker = () => {
       }
       hazardId.value = demoId
       distance.value = demoDist
+      
       return
     }
 
@@ -199,5 +203,6 @@ export const useHazardTracker = () => {
     start,
     stop,
     resetPassed,
+    hazardTitle
   }
 }
