@@ -62,6 +62,7 @@ $text: #475569;
   margin: 0 auto;
   overflow: hidden;
   font-family: 'Inter', 'SF Pro Display', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: #fcfcfd;
 
   &__header {
     display: flex;
