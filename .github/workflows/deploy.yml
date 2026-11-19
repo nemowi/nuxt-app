@@ -23,7 +23,7 @@ jobs:
 
       # 3. Ставим зависимости
       - name: Install dependencies
-        run: npm ci
+        run: npm i
 
       # 4. Генерируем статический сайт (создастся папка .output/public)
       - name: Generate static site
