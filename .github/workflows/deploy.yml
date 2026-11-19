@@ -1,0 +1,42 @@
+name: Deploy Nuxt Static to Shared Hosting
+
+on:
+  push:
+    branches:
+      - main # или master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Скачиваем код
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Ставим Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm' # Если у друга yarn или pnpm — поменяйте здесь
+
+      # 3. Ставим зависимости
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Генерируем статический сайт (создастся папка .output/public)
+      - name: Generate static site
+        run: npm run generate
+        env:
+          NUXT_PUBLIC_API_BASE: https://teacher-profession.ru/api
+
+      # 5. Заливаем файлы на виртуальный хостинг по FTP
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: razxcer.beget.tech
+          username: razxcer_hackafront
+          password: HackaFront1234!
+          local-dir: ./.output/public/ # Откуда берем готовые файлы
+          server-dir: /public_html/    # Куда кладем на хостинге (проверьте путь в панели хостинга!)
