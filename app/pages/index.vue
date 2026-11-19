@@ -1,10 +1,8 @@
 <template>
   <div class="index-page">
-    <OverviewScreen v-if="activeTab === 'overview'" />
-
-    <!-- TODO: экраны «Репорт» и «Опасности» -->
-    <section v-else-if="activeTab === 'report'" class="index-page__stub">Репорт</section>
-    <section v-else-if="activeTab === 'dangers'" class="index-page__stub">
+    <OverviewScreen v-show="activeTab === 'overview'" />
+    <Report v-show="activeTab === 'report'" class="index-page__stub"/>
+    <section v-show="activeTab === 'dangers'" class="index-page__stub">
       Опасности
       <button type="button" @click="logout">Выйти</button>
     </section>
@@ -15,6 +13,7 @@
 import OverviewScreen from '~/widgets/overview/ui/OverviewScreen.vue'
 import { useActiveTab } from '~/widgets/bottom-nav/model/useActiveTab'
 import { useAuth } from '~/entities/user/api/model/useAuth';
+import Report from './report.vue';
 
 
 const activeTab = useActiveTab()

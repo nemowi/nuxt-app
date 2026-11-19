@@ -24,7 +24,7 @@
           <path class="bottom-nav__fill" d="M5 11.5A2.5 2.5 0 0 1 7.5 9H10l1.6-2.5h8.8L22 9h2.5a2.5 2.5 0 0 1 2.5 2.5v11A2.5 2.5 0 0 1 24.5 25h-17A2.5 2.5 0 0 1 5 22.5z" />
           <circle class="bottom-nav__detail" cx="16" cy="16.5" r="4" />
         </svg>
-        <span class="bottom-nav__label">Репорт</span>
+        <span class="bottom-nav__label">Сообщить</span>
       </button>
 
       <button

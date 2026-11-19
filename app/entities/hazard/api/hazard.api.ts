@@ -37,3 +37,19 @@ export const checkHazards = (payload: CheckHazardsPayload) => {
     headers: token.value ? { Authorization: `Bearer ${token.value}` } : {},
   })
 }
+
+export const createHazard = (body: FormData) => {
+  const api = useRuntimeConfig().public.apiUrl
+  const { token } = useAuth()
+
+  return $fetch<HazardPoint>(`${api}/api/hazards`, {
+    method: 'POST',
+    body,
+    headers: {
+      Accept: 'application/json',
+      ...(token.value
+        ? { Authorization: `Bearer ${token.value}` }
+        : {}),
+    },
+  })
+}
