@@ -2,6 +2,7 @@
   <div class="report">
     <ReportScreen/>
   </div>
+  
 </template>
 
 <script setup>

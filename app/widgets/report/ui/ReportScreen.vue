@@ -85,6 +85,7 @@ const onFileChange = (event) => {
   setPhoto(event.target.files?.[0] ?? null)
   event.target.value = '' // чтобы можно было выбрать тот же файл повторно
 }
+
 </script>
 
 <style lang="scss" scoped>

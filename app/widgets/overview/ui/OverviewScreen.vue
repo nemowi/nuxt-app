@@ -20,6 +20,7 @@
       :hazard-key="hazardId"
     />
   </section>
+  
 </template>
 
 <script setup>

@@ -18,8 +18,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm' # Если у друга yarn или pnpm — поменяйте здесь
+          node-version: 22.21.0
+          cache: npm
 
       # 3. Ставим зависимости
       - name: Install dependencies
