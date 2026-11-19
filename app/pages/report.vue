@@ -7,7 +7,6 @@
 <script setup>
 import ReportScreen from '~/widgets/report/ui/ReportScreen.vue';
 
-
 </script>
 
 <style lang="scss" scoped>

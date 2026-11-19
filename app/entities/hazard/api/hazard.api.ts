@@ -52,4 +52,5 @@ export const createHazard = (body: FormData) => {
         : {}),
     },
   })
+  
 }

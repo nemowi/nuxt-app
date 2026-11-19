@@ -48,6 +48,7 @@ defineProps({
   modelValue: { type: String, required: true },
 })
 const emit = defineEmits(['update:modelValue'])
+
 </script>
 
 <style lang="scss" scoped>

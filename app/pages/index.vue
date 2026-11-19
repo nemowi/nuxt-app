@@ -26,4 +26,5 @@ const { logout } = useAuth();
     padding: 24px;
   }
 }
+
 </style>
