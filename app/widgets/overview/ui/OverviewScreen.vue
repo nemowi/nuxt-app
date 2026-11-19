@@ -9,7 +9,7 @@
     </header>
 
     <div class="overview__info">
-      <p class="overview__value">{{ valueText }}</p>
+      <p class="overview__value" :class="{active: isNear}">{{ valueText }}</p>
       <p class="overview__caption">{{ captionText }}</p>
     </div>
 
@@ -51,14 +51,20 @@ const valueText = computed(() => {
 const captionText = computed(() =>
   distance.value == null ? 'опасностей рядом нет' : 'до опасности',
 )
+
+const isNear = computed(() => {
+  return distance !== null && distance <= 50
+});
+
 </script>
 
 <style lang="scss" scoped>
 $title: #0f172a;
 $text: #475569;
+$red: #f0261c;
 
 .overview {
-  max-width: 440px;
+  max-width: 550px;
   margin: 0 auto;
   overflow: hidden;
   font-family: 'Inter', 'SF Pro Display', -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -114,6 +120,10 @@ $text: #475569;
     font-size: 26px;
     font-weight: 500;
     color: $text;
+  }
+
+  &__caption.active {
+    color: $red;
   }
 }
 </style>
