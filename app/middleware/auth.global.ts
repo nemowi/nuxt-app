@@ -7,12 +7,7 @@ export default defineNuxtRouteMiddleware((to) => {
   const isPublic = PUBLIC_PAGES.includes(to.path)
 
   // не авторизован и идёт на закрытую страницу → на вход
-  if (!isAuthed.value && !isPublic) {
+  if (!isAuthed.value) {
     return navigateTo('/login')
-  }
-
-  // уже авторизован и открывает вход/регистрацию → на главную
-  if (isAuthed.value && isPublic) {
-    return navigateTo('/')
   }
 })

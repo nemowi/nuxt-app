@@ -69,7 +69,7 @@
       </button>
     </form>
   </section>
-  
+
 </template>
 
 <script setup>
@@ -98,11 +98,11 @@ $border: #dfe4ec;
 .report {
   max-width: 550px;
   margin: 0 auto;
-  padding: 0 24px 24px;
+  padding: 0;
   font-family: 'Inter', 'SF Pro Display', -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   &__header {
-    padding-top: 24px;
+    padding-top: 0px;
   }
 
   &__logo {
