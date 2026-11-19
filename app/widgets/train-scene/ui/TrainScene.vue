@@ -57,7 +57,7 @@
 
       <!-- поезд стоит на месте, чуть покачивается -->
       <g class="train-scene__train" :class="{ 'train-scene__train--moving': moving }">
-        <image :href="trainUrl" x="145" y="422" width="226" height="346" />
+        <image :href="trainUrl" x="110" y="410" width="300" height="500" />
       </g>
     </svg>
   </div>
