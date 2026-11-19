@@ -29,7 +29,7 @@ jobs:
       - name: Generate static site
         run: npm run generate
         env:
-          NUXT_PUBLIC_API_BASE: https://teacher-profession.ru
+          NUXT_PUBLIC_API_BACKEND: https://teacher-profession.ru
 
       # 5. Заливаем файлы на виртуальный хостинг по FTP
       - name: Deploy via FTP
