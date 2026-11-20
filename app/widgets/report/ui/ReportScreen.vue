@@ -52,14 +52,14 @@
         placeholder="Опишите место и обстоятельства…"
       />
       
-      <!--
+      
        <p v-if="errorMessage" class="report__message report__message--error" role="alert">
         {{ errorMessage }}
       </p>
       <p v-if="successMessage" class="report__message report__message--success" role="status">
         {{ successMessage }}
       </p>
-      -->
+      
      
       <button class="report__submit" type="submit" :disabled="isLoading">
         <svg class="report__send" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

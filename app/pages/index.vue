@@ -2,10 +2,9 @@
   <div class="index-page">
     <OverviewScreen v-show="activeTab === 'overview'" />
     <Report v-show="activeTab === 'report'" class="index-page__stub"/>
-    <section v-show="activeTab === 'dangers'" class="index-page__stub">
-      Опасности
+    <DangersScreen v-show="activeTab === 'dangers'" class="index-page__stub">
       <button type="button" @click="logout">Выйти</button>
-    </section>
+    </DangersScreen>
   </div>
   
 </template>
@@ -15,7 +14,7 @@ import OverviewScreen from '~/widgets/overview/ui/OverviewScreen.vue'
 import { useActiveTab } from '~/widgets/bottom-nav/model/useActiveTab'
 import { useAuth } from '~/entities/user/api/model/useAuth';
 import Report from './report.vue';
-
+import DangersScreen from '~/widgets/dangers/ui/DangersScreen.vue';
 
 const activeTab = useActiveTab()
 const { logout } = useAuth();
