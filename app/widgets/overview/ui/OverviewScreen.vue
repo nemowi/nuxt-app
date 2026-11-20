@@ -8,6 +8,7 @@
       </span>
     </header>
 
+    
     <div class="overview__info">
       <p class="overview__value" :class="{active: isNear}">{{ valueText }}</p>
       <p class="overview__caption">{{ captionText }}</p>

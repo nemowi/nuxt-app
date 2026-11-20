@@ -1,4 +1,5 @@
 <template>
+  
   <main class="register-page">
     <div class="register-page__content">
       <img class="register-page__logo" :src="logo" alt="РЖД" />

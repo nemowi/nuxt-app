@@ -7,6 +7,7 @@
       <button type="button" @click="logout">Выйти</button>
     </section>
   </div>
+  
 </template>
 
 <script setup>

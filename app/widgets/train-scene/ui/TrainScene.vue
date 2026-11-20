@@ -136,6 +136,7 @@ const build = () => {
       opacity: clamp((u - 0.07) / 0.1, 0, 1),
     })
   }
+  
 
   const objects = []
   for (let i = 0; i < OBJECT_COUNT; i++) {
