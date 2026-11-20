@@ -142,7 +142,7 @@ $border: #dfe4ec;
     justify-content: center;
     gap: 10px;
     width: 100%;
-    height: 160px;
+    height: 130px;
     padding: 0;
     overflow: hidden;
     border: 0;
@@ -191,7 +191,7 @@ $border: #dfe4ec;
 
   &__input {
     width: 90%;
-    height: 56px;
+    height: 46px;
     padding: 0 20px;
     border: 1.5px solid $border;
     border-radius: 18px;
@@ -213,7 +213,8 @@ $border: #dfe4ec;
 
     &--area {
       height: auto;
-      min-height: 92px;
+      min-height: 52px;
+      max-height: 55px;
       padding: 16px 20px;
       resize: none;
     }
