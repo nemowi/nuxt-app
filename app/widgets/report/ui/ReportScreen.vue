@@ -99,9 +99,9 @@ $border: #dfe4ec;
 .report {
   max-width: 550px;
   margin: 0 auto;
-  padding: 0;
   font-family: 'Inter', 'SF Pro Display', -apple-system, 'Segoe UI', Roboto, sans-serif;
-
+  padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
+  
   &__header {
     padding-top: 0px;
   }

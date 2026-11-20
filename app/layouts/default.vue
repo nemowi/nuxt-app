@@ -1,6 +1,8 @@
 <template>
   <div>
-    <slot />
+    <div class="app-layout__content">
+      <slot />
+    </div>
     <BottomNav v-model="activeTab" />
   </div>
 </template>
@@ -11,3 +13,7 @@ import { useActiveTab } from '~/widgets/bottom-nav/model/useActiveTab'
 
 const activeTab = useActiveTab()
 </script>
+
+<style lang="scss" scoped>
+
+</style>
